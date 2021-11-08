@@ -11,21 +11,21 @@
                 {{csrf_field()}}
 
                 <div class="input-field">
-                    <input type="text" name="nome">
+                    <input type="text" name="nome" required="required">
                     <label>Nome</label>
                 </div>
 
                 <div class="input-field">
-                    <input type="text" name="email">
+                    <input type="text" name="email" required="required">
                     <label>E-mail</label>
                 </div>
 
                 <div class="input-field">
-                    <input type="password" name="senha">
+                    <input type="password" name="senha" required="required">
                     <label>Senha</label>
                 </div>
 
-                <button class="btn deep-orange">Entrar</button>
+                <button class="btn #26a69a teal lighten-1">Salvar</button>
             </form>
         </div>  
     </div>

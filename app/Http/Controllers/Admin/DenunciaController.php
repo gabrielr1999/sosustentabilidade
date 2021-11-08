@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Denuncia;
+use App\Models\ProductImage;
 use Illuminate\Support\Facades\Auth;
 
 class DenunciaController extends Controller
@@ -19,44 +20,37 @@ class DenunciaController extends Controller
 
     public function index()
     {
-        $user = auth()->user();
-        $registros = $user->store->denuncia;
+        // $user = auth()->user();
+        $registros = Denuncia::where("id_usuario", Auth::user()->id)->get();
             return view('admin.denuncias.index', compact('registros'));
     }
 
     public function adicionar()
     {
-        // User::create([
-        //     'id' => $req->id,
-        //     'name' => $req->name,
-        //     'email' => $req->email
-        // ]);
-
-        // Denuncia::create([
-        //     'titulo' => $req->titulo, 
-        //     'descricao' =>$req->descricao,
-        //     'estado' =>$req->estado,
-        //     'municipio' =>$req->municipio,
-        //     'bairro' =>$req->bairro,
-        //     'pntReferencia' =>$req->pntReferencia,
-        //     'problema' =>$req->problema,
-        //     'imagem' =>$req->imagem,
-        //     'resolvido' =>$req->resolvido,
-        //     'id_usuario' =>$req->resolvido
-        // ]);
 
         return view('admin.denuncias.adicionar');
     }
 
     public function salvar(Request $req)
     {
+        $denuncia = new Denuncia();
         $dados = $req->all();
 
-        if(isset($dados['resolvido'])){
+        if(!isset($dados['resolvido'])){
             $dados['resolvido'] = 'Não';
         }else{
             $dados['resolvido'] = 'Sim';
         }
+
+        // for($i = 0; $i < count($req->allFiles()['imagem']); $i++)
+        // {
+        //     $file = $req->allFiles()['imagem'][$i];
+        //     $denunciaImagem = new ProductImage();
+        //     $denunciaImagem->denuncia = $denuncia->id;
+        //     $denunciaImagem->path = $file->store('denuncias');
+        //     $denunciaImagem->save();
+        //     unset($denunciaImagem);
+        // }
 
         if($req->hasFile('imagem')){
             $imagem = $req->file('imagem');
@@ -67,8 +61,40 @@ class DenunciaController extends Controller
             $imagem->move($dir,$nomeImagem);
             $dados['imagem'] = $dir."/".$nomeImagem;
         }
-// dd($dados);
-        $denuncia = auth()->user()->denuncia;
+
+        // $loop = count($req->file('imagem'));
+
+        // for($i = 0; $i < $loop; $i++){
+        //     if($req->hasFile('imagem')){
+        //             $imagem = $req->file('imagem');
+        //             $num = rand(1111,9999);
+        //             $dir = "img/denuncias";
+        //             $ex = $imagem->guessClientExtension();
+        //             $nomeImagem = "imagem_".$num.".".$ex;
+        //             $imagem->move($dir,$nomeImagem);
+        //             $dados['imagem'] = $dir."/".$nomeImagem;
+        //         }
+        // }
+
+        // $images=array();
+        // if($files=$req->file('imagem')){
+        //     foreach($files as $file){
+        //         $name=$file->getClientOriginalName();
+        //     $file->move('img/denuncias',$name);
+        //     $dados[]=$name;
+        //     }
+        // }
+        /*Insert your data*/
+
+        // Detail::insert( [
+        //     'images'=>  implode("|",$images),
+        //     'description' =>$input['description'],
+        //     //you can put other insertion here
+        // ]);
+
+        $dados['id_usuario'] = auth()->id();
+//  dd($dados);
+//         $denuncia = auth()->user()->denuncia;
         Denuncia::create($dados);
 
         return redirect()->route('admin.denuncias');
@@ -85,9 +111,9 @@ class DenunciaController extends Controller
         $dados = $req->all();
 
         if(isset($dados['resolvido'])){
-            $dados['resolvido'] = 'Não';
-        }else{
             $dados['resolvido'] = 'Sim';
+        }else{
+            $dados['resolvido'] = 'Não';
         }
 
         if($req->hasFile('imagem')){
@@ -109,5 +135,21 @@ class DenunciaController extends Controller
     {
         Denuncia::find($id)->delete();
         return redirect()->route('admin.denuncias');
+    }
+
+    public function busca(Request $request)
+    {
+        $search = request('search');
+
+        if($search)
+        {
+            $denuncias = Denuncia::where([
+                ['titulo','like','%'.$search.'%']
+            ])->get();
+        }else {
+            $denuncias = Denuncia::all();
+        }
+        // dd($search);
+        return view('pagina.busca',compact('denuncias','search'));
     }
 }

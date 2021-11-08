@@ -1,6 +1,9 @@
 
       <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
     <script type="text/javascript">
         
           document.addEventListener('DOMContentLoaded', function() {
@@ -8,7 +11,10 @@
             var instances = M.Sidenav.init(elems);
             M.updateTextFields();
           });
-            
+          
+          $(document).ready(function(){
+            $(".dropdown-trigger").dropdown();
+          });
     
     </script>
     </body>

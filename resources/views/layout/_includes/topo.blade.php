@@ -22,20 +22,39 @@
     </head>
     <body>
         <header>
+            <ul id="dropdown1" class="dropdown-content">
+              <li><a href="{{route('site.login.sair')}}">Sair</a></li>
+            </ul>
+            <ul id="dropdown2" class="dropdown-content">
+              <div class="row" id="topbarsearch">
+                <div class="input-field col s6 s12 red-text">
+                  <input type="text" placeholder="search" id="autocomplete-input" class="autocomplete red-text" >
+                  </div>
+                </div>
+              </div>
+            </ul>
             <nav>
                 <div class="nav-wrapper #4caf50 green">
-                    <a href="#!" class="brand-logo">SOSustentabilidade</a>
-                    <a href="#!" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <a href="{{route('site.home')}}" class="brand-logo">SOSustentabilidade</a>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="http://localhost/sosustentabilidade/public/">Home</a></li>
+                    <li>
+                      <form action="{{route('site.busca')}}" method="GET">
+                        <div class="input-field">
+                          <input id="search" type="text" name="search" required>
+                          <label class="label-icon" for="nome"><i class="material-icons">search</i></label>
+                          <i class="material-icons">close</i>
+                        </div>
+                      </form>
+                    </li>
+                        <li><a href="{{route('site.home')}}">Home</a></li>
                         <li><a href="{{route('site.sobre_nos')}}">Sobre nós</a></li>
                         @if(Auth::guest())
                           <li><a href="{{route('site.login')}}">Login</a></li>
                         @else
                           <li><a href="{{route('admin.denuncias')}}">Denuncias</a></li>
-                          <li><a href="#">{{Auth::user()->name}}</a></li>
-                          <li><a href="{{route('site.login.sair')}}">Sair</a></li>
+                          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">{{Auth::user()->name}}<i class="material-icons right">arrow_drop_down</i></a></li>
                         @endif
+                        
                     </ul>
                     <ul class="sidenav" id="mobile">
                         <li><a href="/">Home</a></li>

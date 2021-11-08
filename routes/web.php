@@ -34,3 +34,6 @@ Route::post('/cadastro/salvar','App\Http\Controllers\Site\CadastroController@sal
 Route::get('/sobre-nos','App\Http\Controllers\Site\PaginaController@sobre_nos')->name('site.sobre_nos');
 Route::get('/orientacoes','App\Http\Controllers\Site\PaginaController@orientacoes')->name('site.orientacoes');
 
+Route::get('/produtos/pesquisa', 'App\Http\Controllers\Admin\DenunciaController@busca')->name('site.busca');
+// Route::get('/busca', 'PaginasController@busca')->name('busca');
+
