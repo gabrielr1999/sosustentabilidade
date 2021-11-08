@@ -9,18 +9,21 @@
         <h3 class="center">Resultado de busca para <strong>“{{$search}}”</strong></h1>
         <div class="row">
             @foreach($denuncias as $denuncia)
-            <div class="col s12 m4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="{{asset($denuncia->imagem)}}" width=400px height=180px>  
-                    </div>
+            
+            <div class="col s12 m7">
+                
+                <div class="card horizontal">
+                <div class="card-image">
+                    <img src="{{asset($denuncia->imagem)}}">
+                </div>
+                <div class="card-stacked">
                     <div class="card-content">
-                        <h4>{{$denuncia->titulo}}</h4>
-                        <p>{{$denuncia->descricao}}</p>
+                    <h5>{{$denuncia->titulo}}</h5>
                     </div>
                     <div class="card-action">
-                        <a href="#">Ver mais</a>
+                    <a href="#">Ver mais</a>
                     </div>
+                </div>
                 </div>
             </div>
             @endforeach

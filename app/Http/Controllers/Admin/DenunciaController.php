@@ -146,11 +146,6 @@ class DenunciaController extends Controller
                 ['estado','like','%'.$search.'%']
             ])->get();
             
-        }elseif($search){
-            $denuncias = Denuncia::where([
-                ['titulo','like','%'.$search.'%']
-            ])->get();
-            
         }else {
             $denuncias = Denuncia::all();
         }
