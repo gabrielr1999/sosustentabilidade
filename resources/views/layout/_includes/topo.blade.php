@@ -36,16 +36,9 @@
             <nav>
                 <div class="nav-wrapper #4caf50 green">
                     <a href="{{route('site.home')}}" class="brand-logo">SOSustentabilidade</a>
+                    
                     <ul class="right hide-on-med-and-down">
-                    <li>
-                      <form action="{{route('site.busca')}}" method="GET">
-                        <div class="input-field">
-                          <input id="search" type="text" name="search" required>
-                          <label class="label-icon" for="nome"><i class="material-icons">search</i></label>
-                          <i class="material-icons">close</i>
-                        </div>
-                      </form>
-                    </li>
+                    
                         <li><a href="{{route('site.home')}}">Home</a></li>
                         <li><a href="{{route('site.sobre_nos')}}">Sobre nós</a></li>
                         @if(Auth::guest())
@@ -67,6 +60,18 @@
                           <li><a href="{{route('site.login.sair')}}">Sair</a></li>
                         @endif
                     </ul>
+                    
                 </div>
+            </nav>
+            <nav>
+              <div class="nav-wrapper #2e7d32 green darken-3">
+              <form action="{{route('site.busca')}}" method="GET">
+                        <div class="input-field">
+                          <input id="search" type="search" name="search" required>
+                          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                          <i class="material-icons">close</i>
+                        </div>
+                      </form>
+              </div>
             </nav>
         </header>
