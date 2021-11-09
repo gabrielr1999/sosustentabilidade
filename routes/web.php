@@ -30,6 +30,7 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/cadastro','App\Http\Controllers\Site\CadastroController@index')->name('site.cadastro');
 Route::post('/cadastro/salvar','App\Http\Controllers\Site\CadastroController@salvar')->name('site.cadastro.salvar');
 
+Route::get('/{titulo}','App\Http\Controllers\Admin\DenunciaController@interna')->name('site.interna');
 
 Route::get('/sobre-nos','App\Http\Controllers\Site\PaginaController@sobre_nos')->name('site.sobre_nos');
 Route::get('/orientacoes','App\Http\Controllers\Site\PaginaController@orientacoes')->name('site.orientacoes');

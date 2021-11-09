@@ -18,11 +18,12 @@ class CreateDenunciasTable extends Migration
             $table->unsignedBigInteger('id_usuario');
 
             $table->string('titulo');
-            $table->string('descricao');
+            $table->text('descricao');
             $table->string('imagem');
             $table->string('estado');
             $table->string('municipio');
             $table->string('bairro');
+            $table->string('endereco',250);
             $table->string('pntReferencia');
             $table->enum('problema',['acessibilidade','agua','esgoto','alagamento','arvores','buracos','lixo']);
             $table->enum('resolvido',['Sim','Não'])->default('Não');

@@ -42,16 +42,6 @@ class DenunciaController extends Controller
             $dados['resolvido'] = 'Sim';
         }
 
-        // for($i = 0; $i < count($req->allFiles()['imagem']); $i++)
-        // {
-        //     $file = $req->allFiles()['imagem'][$i];
-        //     $denunciaImagem = new ProductImage();
-        //     $denunciaImagem->denuncia = $denuncia->id;
-        //     $denunciaImagem->path = $file->store('denuncias');
-        //     $denunciaImagem->save();
-        //     unset($denunciaImagem);
-        // }
-
         if($req->hasFile('imagem')){
             $imagem = $req->file('imagem');
             $num = rand(1111,9999);
@@ -61,37 +51,7 @@ class DenunciaController extends Controller
             $imagem->move($dir,$nomeImagem);
             $dados['imagem'] = $dir."/".$nomeImagem;
         }
-
-        // $loop = count($req->file('imagem'));
-
-        // for($i = 0; $i < $loop; $i++){
-        //     if($req->hasFile('imagem')){
-        //             $imagem = $req->file('imagem');
-        //             $num = rand(1111,9999);
-        //             $dir = "img/denuncias";
-        //             $ex = $imagem->guessClientExtension();
-        //             $nomeImagem = "imagem_".$num.".".$ex;
-        //             $imagem->move($dir,$nomeImagem);
-        //             $dados['imagem'] = $dir."/".$nomeImagem;
-        //         }
-        // }
-
-        // $images=array();
-        // if($files=$req->file('imagem')){
-        //     foreach($files as $file){
-        //         $name=$file->getClientOriginalName();
-        //     $file->move('img/denuncias',$name);
-        //     $dados[]=$name;
-        //     }
-        // }
-        /*Insert your data*/
-
-        // Detail::insert( [
-        //     'images'=>  implode("|",$images),
-        //     'description' =>$input['description'],
-        //     //you can put other insertion here
-        // ]);
-
+    
         $dados['id_usuario'] = auth()->id();
 //  dd($dados);
 //         $denuncia = auth()->user()->denuncia;
@@ -151,5 +111,12 @@ class DenunciaController extends Controller
         }
         // dd($search);
         return view('pagina.busca',compact('denuncias','search'));
+    }
+
+    public function interna($titulo)
+    {
+        $registros = Denuncia::where('titulo',$titulo)->get();
+        // dd($registros);
+        return view('interna',compact('registros'));
     }
 }
