@@ -113,9 +113,11 @@ class DenunciaController extends Controller
         return view('pagina.busca',compact('denuncias','search'));
     }
 
-    public function interna($titulo)
+    public function interna( $problema, $titulo)
     {
         $registros = Denuncia::where('titulo',$titulo)->get();
+        $registros = Denuncia::where('problema',$problema)->get();
+        
         // dd($registros);
         return view('interna',compact('registros'));
     }

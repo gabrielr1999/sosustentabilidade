@@ -18,7 +18,7 @@
                         <p>{{$denuncia->descricao}}</p>
                     </div>
                     <div class="card-action">
-                        <a href="#">Ver mais</a>
+                        <a href="{{$denuncia->problema}}/{{$denuncia->titulo}}">Ver mais</a>
                     </div>
                 </div>
             </div>

@@ -24,6 +24,11 @@
 </div>
 
 <div class="input-field">
+    <input type="text" name="endereco" value="{{isset($registro->endereco) ? $registro->endereco : ''}}">
+    <label>Endereço</label>
+</div>
+
+<div class="input-field">
     <input type="text" name="pntReferencia" value="{{isset($registro->pntReferencia) ? $registro->pntReferencia : ''}}">
     <label>Ponto de referência</label>
 </div>
@@ -51,7 +56,7 @@
 <div class="input-field">
     <p>
         <label for="test5">
-            <input type="checkbox" id="test5" {{isset($registro->resolvido) && $registro->resolvido == 'Sim' ? 'checked' : ''}} value="true">
+            <input type="checkbox" name="resolvido" id="test5" {{isset($registro->resolvido) && $registro->resolvido == 'Sim' ? 'checked' : ''}}>
             <span>Solucionado?</span>
         </label>
     </p>

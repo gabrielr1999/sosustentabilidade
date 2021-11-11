@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Denuncia extends Model
 {
     protected $fillable = [
-        'id_usuario','titulo', 'descricao','estado','municipio','bairro','pntReferencia','problema','imagem','resolvido'
+        'id_usuario','titulo', 'descricao','estado','municipio','bairro','pntReferencia','problema','imagem','resolvido', 'endereco'
     ];
 
     public function denuncia()
