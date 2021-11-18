@@ -97,6 +97,18 @@ class DenunciaController extends Controller
         return redirect()->route('admin.denuncias');
     }
 
+    public function interna( $problema, $titulo)
+    {
+        $urlAmigavel = $this->formataPraUrl($titulo);
+        $urlSocial = env('APP_URL') . $urlAmigavel;
+
+        $registros = Denuncia::where('titulo',$titulo)->get();
+        $registros = Denuncia::where('problema',$problema)->get();
+        
+        // dd($registros);
+        return view('interna',compact('registros', 'urlSocial'));
+    }
+
     public function busca(Request $request)
     {
         $search = request('search');
@@ -113,12 +125,9 @@ class DenunciaController extends Controller
         return view('pagina.busca',compact('denuncias','search'));
     }
 
-    public function interna( $problema, $titulo)
-    {
-        $registros = Denuncia::where('titulo',$titulo)->get();
-        $registros = Denuncia::where('problema',$problema)->get();
-        
-        // dd($registros);
-        return view('interna',compact('registros'));
-    }
+    
+
+    
+
+    
 }

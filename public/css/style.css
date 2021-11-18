@@ -1,0 +1,200 @@
+
+.social-share-group {
+    padding: 10px;
+    padding-left: 0;
+    padding-right: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+.social-share-group .social-share-item:last-child {
+    margin-right: 0 !important;
+}
+.box-share-group.vertical .social-share-group {
+    flex-direction: column;
+}
+
+.box-share-group.vertical .social-share-group .social-share-item {
+    margin: 0;
+    margin-bottom: 8px;
+}
+.header .social-share-group .social-share-item a,
+footer .social-share-group .social-share-item a {
+    background: #fff;
+}
+.header .social-share-group .social-share-item a i {
+    opacity: 0.6 !important;
+}
+
+.social-share-group .social-share-item:last-child {
+    margin-right: 0 !important;
+}
+.social-share-item .botao-redes {
+    padding: 0;
+    text-align: center;
+    transition: background-color 0.5s ease;
+    position: relative;
+    display: block;
+    height: 100%;
+}
+.social-share-item {
+    display: inline-block;
+    margin-right: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    width: 38px;
+    height: 38px;
+    border-radius: 100% !important;
+    overflow: hidden;
+}
+
+.social-share-item i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-share-group.vertical .social-share-group .social-share-item {
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.header-line .social-share-item .fa,
+.header-line .social-share-item .fab {
+    color: #318bc0;
+}
+
+.box-votacao .social-share-item .fa,
+.social-share-item .fa {
+    color: #fff;
+}
+.box-votacao .social-share-item .botao-whatsapp,
+.social-share-item .botao-whatsapp {
+    background-color: #29a61a;
+    color: #fff;
+}
+.box-votacao .social-share-item .botao-facebook,
+.social-share-item .botao-facebook {
+    background-color: #4364ab;
+    color: #fff;
+}
+.box-votacao .social-share-item .botao-twitter,
+.social-share-item .botao-twitter {
+    background-color: #53c1ed;
+    color: #fff;
+}
+.box-votacao .social-share-item .botao-linkedin,
+.social-share-item .botao-linkedin {
+    background-color: #0d689f;
+    color: #fff;
+}
+.box-votacao .social-share-item .botao-flipboard,
+.social-share-item .botao-flipboard {
+    background-color: #ec0a21;
+    color: #fff;
+}
+.box-votacao .social-share-item .botao-envelope,
+.social-share-item .botao-envelope {
+    background-color: #686868;
+    color: #fff;
+}
+.box-votacao .social-share-item .botao-pinterest,
+.social-share-item .botao-pinterest {
+    background-color: #f00;
+    color: #fff;
+}
+
+.header .social-share-group .social-share-item a,
+footer .social-share-group .social-share-item a {
+    background: #fff;
+}
+.header .social-share-group .social-share-item a i {
+    opacity: 0.6 !important;
+}
+
+@media (max-width: 480px) {
+    
+
+    .box-share-group .social-share-group {
+        display: flex;
+        align-content: center;
+        margin: 20px 0;
+        justify-content: space-around !important;
+    }
+
+    .box-votacao .box-share-group .social-share-group {
+        justify-content: center !important;
+    }
+    .assinaturaColunista,
+    .social-share-group {
+        min-height: 60px;
+    }
+    
+
+    .box-share-group .social-share-item {
+        width: 42px;
+        height: 42px;
+    }
+
+}
+.content-principal .quiz .box-share-group .social-share-group {
+    margin-top: 0 !important;
+    margin-bottom: 0px !important;
+}
+
+@media (max-width: 375px) {
+    .social-share-item {
+        margin-right: 14px;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .social-share-item {
+        margin-right: 7px;
+    }
+    .social-share-item {
+        margin-right: 5px;
+    }
+}
+
+ .box-share-group.vertical {
+    display: block;
+}
+
+@media (max-width: 812px) {
+    .fazendometro .box-share-group.vertical {
+        display: none;
+    }
+}
+
+.box-share-group.vertical {
+    position: fixed;
+    left: 7px;
+    top: 600px;
+    display: none;
+    z-index: 9;
+}
+
+@media (min-width: 1200px) {
+    .box-share-group.vertical {
+        display: block;
+    }
+}
+
+@media (max-width: 480px){
+.box-share-group .social-share-group {
+    display: flex;
+    align-content: center;
+    margin: 20px 0;
+    justify-content: space-around!important;
+}}
+
+@media (max-width: 480px){
+.agrupa-box .box-share-group {
+    display: block;
+}}
+

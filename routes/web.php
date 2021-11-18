@@ -27,6 +27,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/denuncias/deletar/{id}','App\Http\Controllers\Admin\DenunciaController@deletar')->name('admin.denuncias.deletar');
 });
 
+Route::get('/denuncias/pesquisa', 'App\Http\Controllers\Admin\DenunciaController@busca')->name('site.busca');
+
 Route::get('/cadastro','App\Http\Controllers\Site\CadastroController@index')->name('site.cadastro');
 Route::post('/cadastro/salvar','App\Http\Controllers\Site\CadastroController@salvar')->name('site.cadastro.salvar');
 
@@ -35,6 +37,6 @@ Route::get('{problema}/{titulo}','App\Http\Controllers\Admin\DenunciaController@
 Route::get('/sobre-nos','App\Http\Controllers\Site\PaginaController@sobre_nos')->name('site.sobre_nos');
 Route::get('/orientacoes','App\Http\Controllers\Site\PaginaController@orientacoes')->name('site.orientacoes');
 
-Route::get('/produtos/pesquisa', 'App\Http\Controllers\Admin\DenunciaController@busca')->name('site.busca');
+
 // Route::get('/busca', 'PaginasController@busca')->name('busca');
 

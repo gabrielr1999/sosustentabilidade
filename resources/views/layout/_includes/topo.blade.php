@@ -6,6 +6,8 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script async defer src="https://kit.fontawesome.com/7dbebd85f2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="http://localhost/sosustentabilidade/public/css/style.css">
 
 
       <!--Let browser know website is optimized for mobile-->
@@ -14,6 +16,15 @@
       <style>
         html {
           font-family: GillSans, Calibri, Trebuchet, sans-serif;
+        }
+        body {
+          display: flex;
+          min-height: 100vh;
+          flex-direction: column;
+        }
+
+        main {
+          flex: 1 0 auto;
         }
   
         @yield('style')
