@@ -52,6 +52,7 @@
                     
                         <li><a href="{{route('site.home')}}">Home</a></li>
                         <li><a href="{{route('site.sobre_nos')}}">Sobre nós</a></li>
+                        <li><a href="{{route('site.orientacoes')}}">Dicas</a></li>
                         @if(Auth::guest())
                           <li><a href="{{route('site.login')}}">Login</a></li>
                         @else

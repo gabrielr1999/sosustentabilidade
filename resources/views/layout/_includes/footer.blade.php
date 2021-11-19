@@ -44,7 +44,18 @@
           $(document).ready(function(){
             $('select').formSelect();
           });
-    
+
+          $(document).ready(function(){
+            $('.slider').slider();
+          });
+
+          $(document).ready(function(){
+            $('.materialboxed').materialbox();
+          });
+
+          $(document).ready(function(){
+            $('.carousel').carousel();
+          });
     </script>
     </body>
   </html>
