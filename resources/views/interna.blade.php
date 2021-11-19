@@ -10,30 +10,32 @@
       <div class="col s12 center"><img src="{{ env('APP_URL_IMG') }}{{$registros[0]->imagem}}" class="responsive-img" width="600" height="420"></div>
     </div>
     <div class="row">
-      <div class="col s12"><p>{{$registros[0]->descricao}}</p></div>
+      <div class="col s12"><p class="flow-text">{{$registros[0]->descricao}}</p></div>
     </div>
-  
-    <table>
-      <thead>
-        <tr>
-          <th>Estado</th>
-            <th>Municipio</th>
-            <th>Bairro</th>
-            <th>Ponto de referência</th>
-            <th>Problema</th>
-        </tr>
-      </thead>
 
-      <tbody>
-        <tr>
-          <td>{{$registros[0]->estado}}</td>
-          <td>{{$registros[0]->municipio}}</td>
-          <td>{{$registros[0]->bairro}}</td>
-          <td>{{$registros[0]->pntReferencia}}</td>
-          <td>{{$registros[0]->problema}}</td>
-        </tr>
-      </tbody>
-    </table>
+    <h5>Localização</h5>
+    <ul class="collapsible">
+      <li>
+        <div class="collapsible-header"><i class="material-icons">public</i>Estado</div>
+        <div class="collapsible-body"><span>{{$registros[0]->estado}}</span></div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">map</i>Municipio</div>
+        <div class="collapsible-body"><span>{{$registros[0]->municipio}}</span></div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">place</i>Bairro</div>
+        <div class="collapsible-body"><span>{{$registros[0]->bairro}}</span></div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">my_location</i>Ponto de referência</div>
+        <div class="collapsible-body"><span>{{$registros[0]->pntReferencia}}</span></div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">home</i>Endereco</div>
+        <div class="collapsible-body"><span>{{$registros[0]->endereco}}</span></div>
+      </li>
+    </ul>
   </div>
 
       @include('componentes.sociais')
