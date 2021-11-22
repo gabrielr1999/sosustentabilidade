@@ -24,10 +24,10 @@
       <div class="col s12"><h1 class="center">{{$registros[0]->titulo}}</h1></div>
       <div class="col s12 center"><img src="{{ env('APP_URL_IMG') }}{{$registros[0]->imagem}}" class="responsive-img" width="600" height="420"></div>
     </div>
+    @include('componentes.sociais')
     <div class="row">
       <div class="col s12"><p class="flow-text">{{$registros[0]->descricao}}</p></div>
     </div>
-
     <h5>Localização</h5>
     <ul class="collapsible">
       <li>
@@ -52,6 +52,4 @@
       </li>
     </ul>
   </div>
-
-      @include('componentes.sociais')
 @endsection

@@ -16,6 +16,7 @@
                     <div class="card-content">
                         <h4>{{$denuncia->titulo}}</h4>
                         <p><strong>Estado:</strong> {{$denuncia->estado}}</p>
+                        <p><strong>Resolvido:</strong> {{$denuncia->resolvido}}</p>
                     </div>
                     <div class="card-action">
                         <a href="{{$denuncia->problema}}/{{$denuncia->titulo}}">Ver mais</a>

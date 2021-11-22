@@ -9,6 +9,9 @@
 </div>
     <div class="container">
         <div class="row">
+            <h3>O que é sustentabilidade?</h3>
+            <p class="flow-text">Sustentabilidade é uma característica ou condição de um processo ou de um sistema que permite a sua permanência, em certo nível, por um determinado prazo. Ultimamente, este conceito tornou-se um princípio segundo o qual o uso dos recursos naturais para a satisfação de necessidades presentes não pode comprometer a satisfação das necessidades das gerações futuras. Este novo princípio foi ampliado para a expressão "sustentabilidade no longo prazo", um "longo prazo" de termo indefinido.</p>
+            <p class="flow-text">A sustentabilidade também pode ser definida como a capacidade de o ser humano interagir com o mundo, preservando o meio ambiente para não comprometer os recursos naturais das gerações futuras. O conceito de sustentabilidade é complexo, pois atende a um conjunto de variáveis interdependentes, mas podemos dizer que deve ter a capacidade de integrar as questões sociais, energéticas, econômicas e ambientais.</p>
             <h3>Que ações poderiam ser desenvolvidas em nossa sociedade para tornar o consumo mais sustentável?</h3>
             <div class="slider" style="top:20px">
                 <ul class="slides">
