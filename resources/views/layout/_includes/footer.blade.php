@@ -2,24 +2,26 @@
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
-            <h5 class="white-text">Footer Content</h5>
-            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            <h5 class="white-text">Veja o desenvolvimento do projeto no GitHub!!!</h5>
+            <!-- <p class="grey-text text-lighten-4">Veja o desenvolvimento do projeto no GitHub</p> -->
+            <li class="social-share-item skew-content">
+              <a onclick="ga('send', 'event', 'Compartilhamento-web', 'barra-lateral', 'linkedin');" rel="noreferrer" class="botao-redes botao-github" href="https://github.com/gabrielr1999/sosustentabilidade" alt="Perfil no GitHub" title="Perfil no GitHub" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+            </li> 
           </div>
           <div class="col l4 offset-l2 s12">
             <h5 class="white-text">Links</h5>
             <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+              <li><a class="grey-text text-lighten-3" href="http://localhost/sosustentabilidade/public/sobre-nos">Home</a></li>
+              <li><a class="grey-text text-lighten-3" href="http://localhost/sosustentabilidade/public/sobre-nos">Sobre nós</a></li>
+              <li><a class="grey-text text-lighten-3" href="http://localhost/sosustentabilidade/public/orientacoes">Dicas</a></li>
+              <li><a class="grey-text text-lighten-3" href="http://localhost/sosustentabilidade/public/login">Login</a></li>
             </ul>
           </div>
         </div>
       </div>
       <div class="footer-copyright">
         <div class="container">
-        © 2014 Copyright Text
-        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        ©2021 SOSustentabildiade
         </div>
       </div>
     </footer>

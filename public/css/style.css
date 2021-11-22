@@ -103,7 +103,13 @@ footer .social-share-group .social-share-item a {
 }
 .box-votacao .social-share-item .botao-pinterest,
 .social-share-item .botao-pinterest {
-    background-color: #f00;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+}
+
+.box-votacao .social-share-item .botao-github,
+.social-share-item .botao-github {
+    background-color: rgb(0, 0, 0);
     color: #fff;
 }
 
