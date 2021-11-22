@@ -2,6 +2,21 @@
 
 @section('titulo','Denuncias')
 
+@section('meta-tags')
+      <meta property="og:locale" content="pt_BR" />
+      <meta property="og:type" content="article" />
+      <meta property="og:title" content='{{$registros[0]->titulo}}' />
+      <meta property="og:url" content='{{$urlSocial}}' />
+      <meta property="og:image" content='{{ env('APP_URL_IMG') }}{{$registros[0]->imagem}}' />
+      <meta property="og:description" content='{{substr($registros[0]->descricao, 0, 130)}}'/>        
+      <meta property="og:site_name" content="SOSustentabilidade" />	
+
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content='{{$registros[0]->titulo}}'>
+      <meta name="twitter:description" content='{{substr($registros[0]->descricao, 0, 130)}}'>
+      <meta name="twitter:image" content="{{ env('APP_URL_IMG') }}{{$registros[0]->imagem}}">	
+@endsection
+
 @section('conteudo')
 
   <div class="container">
