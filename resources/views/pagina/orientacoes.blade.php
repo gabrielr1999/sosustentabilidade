@@ -2,6 +2,21 @@
 
 @section('titulo','Sobre nós')
 
+@section('meta-tags')
+      <meta property="og:locale" content="pt_BR" />
+      <meta property="og:type" content="article" />
+      <meta property="og:title" content='Saiba mais sobre sustentabilidade - SOSustentabilidade' />
+      <meta property="og:url" content="{{ env('APP_URL') }}" />
+      <meta property="og:image" content="{{ env('APP_URL')}}image/sosustetabilidade.jpg" />
+      <meta property="og:description" content='O que é sustentabilidade? Como ajudar? Saiba mais!'/>        
+      <meta property="og:site_name" content="SOSustentabilidade" />	
+
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content='Saiba mais sobre sustentabilidade - SOSustentabilidade'>
+      <meta name="twitter:description" content='O que é sustentabilidade? Como ajudar? Saiba mais!'>
+      <meta name="twitter:image" content="{{ env('APP_URL')}}image/sosustetabilidade.jpg">	
+@endsection
+
 @section('conteudo')
 
 <div class="container">

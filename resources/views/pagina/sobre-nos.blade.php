@@ -1,6 +1,22 @@
 @extends('layout.site')
 
 @section('titulo','Sobre nós')
+
+@section('meta-tags')
+      <meta property="og:locale" content="pt_BR" />
+      <meta property="og:type" content="article" />
+      <meta property="og:title" content='Conheça mais sobre a SOSustentabilidade' />
+      <meta property="og:url" content="{{ env('APP_URL') }}" />
+      <meta property="og:image" content="{{ env('APP_URL')}}image/sosustetabilidade.jpg" />
+      <meta property="og:description" content='Sobre o SOSustentabilidade'/>        
+      <meta property="og:site_name" content="SOSustentabilidade" />	
+
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content='Conheça mais sobre a SOSustentabilidade'>
+      <meta name="twitter:description" content='Sobre o SOSustentabilidade'>
+      <meta name="twitter:image" content="{{ env('APP_URL')}}image/sosustetabilidade.jpg">	
+@endsection
+
 @section('style','.card-image {
   border-radius: 50%;
   overflow: hidden;

@@ -2,6 +2,21 @@
 
 @section('titulo','Denuncias')
 
+@section('meta-tags')
+      <meta property="og:locale" content="pt_BR" />
+      <meta property="og:type" content="article" />
+      <meta property="og:title" content='Denuncias por Estado - SOSustentabilidade' />
+      <meta property="og:url" content="{{ env('APP_URL') }}denuncias/pesquisa?search={{$search}}" />
+      <meta property="og:image" content="{{ env('APP_URL')}}image/sosustetabilidade.jpg" />
+      <meta property="og:description" content='Saiba todos os estado com denuncia.'/>        
+      <meta property="og:site_name" content="SOSustentabilidade" />	
+
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content='Denucias por Estado - SOSustentabilidade'>
+      <meta name="twitter:description" content='Saiba todos os estado com denuncia.'>
+      <meta name="twitter:image" content="{{ env('APP_URL')}}image/sosustetabilidade.jpg">	
+@endsection
+
 @section('conteudo')
     @if(isset($denuncias))
     <div class="container">
