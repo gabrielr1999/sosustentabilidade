@@ -25,7 +25,7 @@ class CreateDenunciasTable extends Migration
             $table->string('bairro');
             $table->string('endereco',250);
             $table->string('pntReferencia');
-            $table->enum('problema',['acessibilidade','agua','esgoto','alagamento','arvores','buracos','lixo']);
+            $table->string('problema');
             $table->enum('resolvido',['Sim','Não'])->default('Não');
             
             $table->timestamps();
