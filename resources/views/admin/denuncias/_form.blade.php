@@ -34,7 +34,7 @@
 </div>
 
 <div class="input-field">
-    <input type="text" name="problema" value="{{isset($registro->problema) ? $registro->problema : ''}}">
+    <input type="text" name="problema" value="{{isset($registro->problema) ? $registro->problema : ''}}" placeholder="Ex: Buracos, Água, Esgoto, Alagamento, Acessibilidade...">
     <label>Problema</label>
 </div>
 

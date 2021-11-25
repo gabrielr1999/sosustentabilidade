@@ -7,12 +7,12 @@
     <div class="container">
         <h3 class="center">Lista de denuncias</h3>
         <div class="row">
-            <table>
+            <table class="striped responsive-table">
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th>Titulo</th>
-                        <th>Descrição</th>
+                        <!-- <th>Descrição</th> -->
                         <th>Imagem</th>
                         <th>Problema</th>
                         <th>Resolvido</th>
@@ -24,7 +24,7 @@
                     <tr>
                         <td>{{$registro->id}}</td>
                         <td>{{$registro->titulo}}</td>
-                        <td>{{$registro->descricao}}</td>
+                        <!-- <td>{{$registro->descricao}}</td> -->
                         <td><img width="120" src="{{asset($registro->imagem)}}" alt="{{$registro->titulo}}"></td>
                         <td>{{$registro->problema}}</td>
                         <td><label style="margin-left: 10px;"><input type="checkbox" name="resolvido" id="test5" {{$registro->resolvido && $registro->resolvido == 'Sim' ? 'checked' : 'disabled'}}><span></span></label></td>

@@ -33,10 +33,14 @@
 
     <script type="text/javascript">
         
-          document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.sidenav');
-            var instances = M.Sidenav.init(elems);
-            M.updateTextFields();
+          // document.addEventListener('DOMContentLoaded', function() {
+          //   var elems = document.querySelectorAll('.sidenav');
+          //   var instances = M.Sidenav.init(elems);
+          //   M.updateTextFields();
+          // });
+
+          $(document).ready(function(){
+            $('.sidenav').sidenav();
           });
           
           $(document).ready(function(){
